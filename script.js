@@ -42,3 +42,29 @@ function squeezeMiniCircle(){
 }
 
 squeezeMiniCircle();
+
+// Animation for navbar elements
+gsap.to("#nav .bounding-elem", {
+    y: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power4.out"
+});
+
+// Animation for main content
+gsap.to("#landingMain .bounding-elem", {
+    y: 0,
+    duration: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    ease: "power4.out"
+});
+
+// Animation for footer elements (from bottom)
+gsap.to("#landingfooter .bounding-elem", {
+    y: 0,
+    duration: 1,
+    stagger: 0.2,
+    delay: 1.5,
+    ease: "power4.out"
+});
