@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Syne';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+#minicircle{
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+    background-color: #fff;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+#main{
+    width: 100%;
+    background-color: #00246b;
+}
+
+#landingPage{
+    width: 100%;
+    height: 100vh;
+    background-color: #00246b;
+}
+
+#landingPage #nav{
+    color: white;
+    padding: 28px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CADCFC;
+}
+
+#landingPage #nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+#nav .menuDiv{
+    /* background-color: red; */
+    width: 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav .menuDiv h4{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#baricon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+#baricon::before, #baricon::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+#baricon::before {
+    width: 100%;
+    top: 0;
+    height: 2px;
+}
+
+#baricon::after {
+    width: 100%;
+    bottom: 0;
+    height: 3px;
+}
+
+#baricon.active::before, #baricon.active::after {
+    background-color: #00246B;
+}
+
+#baricon.active::before {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#baricon.active::after {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #FCA311;
+    transition: all 0.4s ease-in-out;
+    z-index: 999;
+    visibility: visible;
+}
+
+.menu-overlay.active {
+    left: 0;
+    visibility: visible;
+}
+
+#landingMain{
+    /* background-color: wheat; */
+    width: 70%;
+    color: #CADCFC;
+    padding-top: 30px;
+    text-transform: uppercase;
+    line-height: 0.9; 
+    margin-top: var(--content-top-margin);
+}
+
+#landingMain h1{
+    /* font-family: 'Bebas Neue'; */
+    font-size: clamp(4rem, 10vw, 10rem);
+    opacity: .6;
+}
+
+.hero-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5vw;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sacramento {
+    text-transform: capitalize;
+  font-family: 'Sacramento', cursive;
+  font-size: 4.5rem;
+  color: #FCA311;
+}
+
+#landingfooter{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.lfooter3{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#slashimg{
+    height: 100%;
+    padding: 0px 10px;
+}
+
+#slashimg img{
+    height: 100%;
+}
+
+#slashtxt a{
+    color: #CADCFC;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+    --content-top-margin: 10%; /* Adjust this value to move content up/down */
+    }
+    #landingPage #nav {
+        padding: 20px;
+    }
+
+    #landingPage #nav a {
+        font-size: 1.2rem;
+    }
+
+    #nav .menuDiv {
+        width: auto;
+        gap: 15px;
+    }
+
+    #nav .menuDiv h4 {
+        font-size: 1rem;
+    }
+
+    #landingMain {
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    .hero-heading {
+        font-size: 3.5rem;
+    }
+
+    .sacramento {
+        font-size: 3.5rem;
+    }
+
+    #landingfooter {
+        padding: 10px 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
+
+    .lfooter2 {
+        order: -1;
+    }
+
+    #slashtxt a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+    --content-top-margin: 10%; /* Adjust this value to move content up/down */
+    }
+    #landingPage #nav a {
+        font-size: 1rem;
+    }
+
+    #nav .menuDiv h4 {
+        font-size: 0.9rem;
+    }
+
+    .hero-heading {
+        font-size: 2.5rem;
+    }
+
+    .sacramento {
+        font-size: 2.5rem;
+    }
+
+    #landingMain {
+        margin-top: var(--content-top-margin);
+        padding-top: 15px;
+    }
+
+    #slashimg {
+        height: 15px;
+        width: 15px;
+        padding: 0px 5px;
+    }
+
+    #slashimg img {
+        height: 15px;
+        width: 15px;
+        object-fit: contain;
+    }
+
+    .lfooter3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #landingMain {
+        padding-top: 10px;
+    }
+
+    .hero-heading {
+        line-height: 1;
+    }
+}
