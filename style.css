@@ -15,7 +15,7 @@ html , body{
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -24,7 +24,7 @@ html , body{
 
 #main{
     width: 100%;
-    background-color: #00246b;
+    background-color: #CADCFC;
 }
 
 #landingPage{
@@ -32,18 +32,25 @@ html , body{
     height: 100vh;
     background-color: #00246b;
     position: relative;
+    padding-top: 85px; /* Add padding to account for fixed nav */
 }
 
-#landingPage #nav{
+#nav {
     color: white;
     padding: 28px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #CADCFC;
+    background-color: #00246b;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-#landingPage #nav a{
+#nav a{
     font-weight: 585;
     color: white;
     text-decoration: none;
@@ -76,7 +83,7 @@ html , body{
     content: '';
     position: absolute;
     right: 0;
-    background-color: #fff;
+    background-color: #CADCFC;
     transition: all 0.4s ease-in-out;
 }
 
@@ -93,7 +100,7 @@ html , body{
 }
 
 #baricon.active::before, #baricon.active::after {
-    background-color: #00246B;
+    background-color: #00246b;
 }
 
 #baricon.active::before {
@@ -107,18 +114,39 @@ html , body{
 .menu-overlay {
     position: fixed;
     top: 0;
-    left: 100%;
+    left: 0;
     width: 100%;
     height: 100vh;
     background-color: #FCA311;
+    transform: translateX(100%);
     transition: all 0.4s ease-in-out;
     z-index: 999;
-    visibility: visible;
 }
 
 .menu-overlay.active {
-    left: 0;
-    visibility: visible;
+    transform: translateX(0);
+}
+
+.mobile-menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-menu a {
+    color: #00246B;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    opacity: 0.7;
 }
 
 #landingMain{
@@ -134,7 +162,7 @@ html , body{
 
 #landingMain h1{
     /* font-family: 'Bebas Neue'; */
-    font-size: clamp(4rem, 10vw, 10rem);
+    font-size: clamp(5rem, 12vw, 12rem);
     opacity: .6;
 }
 
@@ -225,30 +253,320 @@ html , body{
     z-index: 1;
 }
 
+#infopage{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00246B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#infopage h2{
+    color: #CADCFC;
+    font-size: 2.3vw;
+    line-height: 1.2;
+    text-transform: capitalize;
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+}
+
+.sacramentoinfo {
+    text-transform: capitalize;
+  font-family: 'Sacramento', cursive;
+  font-size: 4.5rem;
+  color: #FCA311;
+  font-weight: 300;
+}
+
+#page2 {
+    padding-top: clamp(4vw, 8vw, 10vw);
+    padding-left: clamp(2vw, 3vw, 4vw);
+    width: 100%;
+    min-height: fit-content;
+    padding-bottom: clamp(4vw, 8vw, 10vw);
+    background-color: #CADCFC;
+}
+
+.page2-heading {
+    color: #00246B;
+    font-family: 'Bebas Neue';
+    font-size: clamp(3rem, 6vw, 6rem);
+    margin-bottom: 2rem;
+    padding-left: 2vw;
+    text-align: center;
+    font-weight: 400;
+    opacity: .8;
+}
+
+#elem {
+    position: relative;
+    border-top: 1px solid #00246B;
+    width: 85%;
+    height: calc(clamp(2rem, 6vw, 6rem) * 2.5); /* Height based on h1 font size */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(2rem, 3vw, 3rem) 2vw; /* Added vertical padding */
+}
+
+#elem h1 {
+    opacity: .8;
+    font-size: clamp(2rem, 6vw, 6rem);
+    color: #00246B;
+    text-transform: uppercase;
+    line-height: 1; /* Added to ensure consistent text height */
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+}
+
+#elem h4 {
+    color: #00246B;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    text-transform: uppercase;
+}
+
+.elemlast{
+    border-bottom: 1px solid #00246B;
+}
+
+#supportuspage{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #CADCFC; 
+}
+
+#team{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #CADCFC; 
+}
+
+#footer{
+    width: 100%;
+    min-height: 70vh;
+    background-color: #00246B;
+    border-bottom: 1.5px solid #CADCFC;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#footerleft{
+    height: 100%;
+    width: 44%;
+}
+
+#footerleft h1{
+    color: #CADCFC;
+    opacity: .6;
+    font-size: clamp(5rem, 12vw, 12rem);
+    padding: 40px 20px;
+    text-transform: uppercase;
+    line-height: .5;
+    font-weight: 600;
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+}
+
+#copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#copyright h4{
+    color: #CADCFC;
+    padding: 10px 20px;
+    font-size: clamp(.7rem, 1.2vw, 1.2rem);
+}
+
+#footeright{
+    height: 100%;
+    width: 56%;
+}
+
+#footeright h2{
+    color: #CADCFC;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    letter-spacing: 3px;
+    padding-top: 50px;
+}
+
+#email {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px;
+}
+
+#mail {
+    width: 60%;
+    padding: 15px 25px;
+    border: 1px solid #CADCFC;
+    border-radius: 50px;
+    background: transparent;
+    color: #CADCFC;
+    font-size: 1.2rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#mail:focus {
+    border-color: #FCA311;
+    box-shadow: 0 0 10px rgba(252, 163, 17, 0.2);
+}
+
+#mail::placeholder {
+    color: #CADCFC;
+    opacity: 0.6;
+}
+
+#btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#email input[type="button"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background-color: #FCA311;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#email i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00246B;
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+#email input[type="button"]:hover {
+    transform: scale(1.1);
+    background-color: #CADCFC;
+}
+
+
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.address {
+    color: #CADCFC;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    padding-left: 20px;
+}
+
+.socials-heading {
+    color: #CADCFC;
+    font-size: 1.2rem;
+    margin: 30px 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #CADCFC;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FCA311;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #CADCFC;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #CADCFC;
+    background-color: #00246b;
+}
+
+.rights {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.privacy {
+    color: #CADCFC;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.privacy:hover {
+    opacity: 1;
+}
+
+
 @media screen and (max-width: 768px) {
     :root {
     --content-top-margin: 10%; /* Adjust this value to move content up/down */
     }
-    #landingPage #nav {
-        padding: 20px;
+    #nav {
+        padding: 30px;
     }
 
-    #landingPage #nav a {
-        font-size: 1.2rem;
-    }
-
-    #nav .menuDiv {
-        width: auto;
-        gap: 15px;
-    }
-
-    #nav .menuDiv h4 {
-        font-size: 1rem;
+    #nav a {
+        font-size: .9rem;
     }
 
     #landingMain {
-        width: 90%;
-        padding-top: 20px;
+        width: 100%;
+    }
+
+    #landingMain h1{
+    /* font-family: 'Bebas Neue'; */
+    font-size: clamp(6rem, 13vw, 13rem);
+    opacity: .6;
+    line-height: 100%;
+    }
+
+    #minicircle{
+        display: none;
+    }
+
+    .menuDiv .bounding h4{
+        display: none;
+    }
+
+    #baricon {
+    width: 40px;
+    height: 12px;
+    margin-right: 10px;
+    }
+
+    #landingfooter{
+        margin-top: 100px;
     }
 
     .hero-heading {
@@ -272,6 +590,88 @@ html , body{
 
     #slashtxt a {
         font-size: 1rem;
+    }    .sacramentoinfo {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    }
+
+    #infopage {
+        padding: 40px 20px;
+    }
+
+    #infopage h2 {
+        font-size: 1rem;
+        display: block;
+        margin: 5px 0;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 2px;
+        font-family: 'Syne';
+        font-weight: 400;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footerleft, #footeright {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #footerleft h1 {
+        text-align: center;
+        line-height: 0.8;
+        padding: 20px 10px;
+    }
+
+    #email {
+        padding: 20px;
+    }
+
+    #mail {
+        width: 80%;
+    }
+
+    #copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    #page2 {
+        padding: 60px 15px;
+    }
+
+    .page2-heading {
+        font-size: clamp(2rem, 4vw, 4rem);
+        margin-bottom: 1rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    #elem {
+        width: 95%;
+        height: auto;
+        padding: 20px 15px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    #elem h1 {
+        font-size: clamp(2rem, 8vw, 4rem);
+        line-height: 1;
+    }
+
+    #elem h4 {
+        font-size: 1rem;
+        padding-left: 5px;
     }
 }
 
@@ -326,6 +726,23 @@ html , body{
 
     .footer-link {
         font-size: 1rem;
+    }
+
+    #page2 {
+        padding: 40px 10px;
+    }
+
+    #elem {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    #elem h1 {
+        font-size: clamp(1.5rem, 7vw, 3rem);
+    }
+
+    #elem h4 {
+        font-size: 0.9rem;
     }
 }
 

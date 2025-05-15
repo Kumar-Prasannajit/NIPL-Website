@@ -13,25 +13,38 @@
 />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <div class="menu-overlay"></div>
+    <div class="menu-overlay">
+        <nav class="mobile-menu" aria-label="Mobile navigation menu">
+            <a href="#landingPage">Home</a>
+            <a href="#infopage">About</a>
+            <a href="#page2">Projects</a>
+            <a href="#supportuspage">Support Us</a>
+            <a href="#team">Team</a>
+            <a href="#footer">Contact</a>
+        </nav>
+    </div>
     <div id="main">
         <div id="minicircle"></div>
+        <nav id="nav" aria-label="Main navigation">
+            <div class="bounding">
+                <a href="#" class="bounding-elem">Navgyan Innovations</a>
+            </div>
+            <div class="menuDiv">    
+                <div class="bounding">
+                    <h4 class="bounding-elem">menu</h4>
+                </div>
+                <div id="baricon"></div>
+            </div>
+        </nav>
         <div id="landingPage">
             <div id="particles-js"></div>
-            <div id="nav">
-                <div class="bounding">
-                    <a href="#" class="bounding-elem">Navgyan Innovations</a>
-                </div>
-                <div class="menuDiv">    
-                    <div class="bounding">
-                        <h4 class="bounding-elem">menu</h4>
-                    </div>
-                    <div id="baricon"></div>
-                </div>
-            </div>
             <div id="landingMain">
                 <div class="bounding">
                     <h1 class="hero-heading bounding-elem">Building Deep Tech</h1>
@@ -62,7 +75,73 @@
                 </div>
             </div>
         </div>
+        <div id="infopage">
+             <h2>Navgyan Innovations Pvt. Ltd. acts as the parent</h2>
+            <h2>body and innovation studio behind a suite of </h2>
+            <h2>futuristic <span class="sacramentoinfo">startup</span> projects. Each initiative is built </h2>
+            <h2>to address critical needs in healthcare, </h2>
+            <h2>environment, agriculture, and digital</h2>
+            <h2>transformation.</h2>
+        </div>
+        <div id="page2">
+            <h1 class="page2-heading">Our Works</h1>
+            <div id="elem">
+                <h1>Breath X</h1>
+                <h4>2024</h4>
+            </div>
+            <div id="elem">
+                <h1>Surgescope</h1>
+                <h4>2024</h4>
+            </div>
+            <div id="elem">
+                <h1>ECHOFISH</h1>
+                <h4>2025</h4>
+            </div>
+            <div id="elem" class="elemlast">
+                <h1>Bridgework</h1>
+                <h4>2025</h4>
+            </div>
+        </div>
+        <div id="supportuspage"></div>
+        <div id="team"></div>
+        <div id="footer">
+            <div id="footerleft">
+                <h1>Navgyan</h1>
+                <h1>Innovations</h1>
+                <div id="copyright">
+                    <div class="company-info">
+                        <h4>Navgyan Innovations Private Limited</h4>
+                        <p class="address">Nilachakra Nagar, Gunupur,<br>Rayagada, Orissa, India, 765022</p>
+                    </div>
+                </div>
+            </div>
+            <div id="footeright">
+                <h2><span class="sacramentoinfo">Share</span> &nbsp; Your Vision</h2>
+                <div id="email">
+                    <input type="email" name="email" id="mail" placeholder="example@gmail.com">
+                    <div id="btn">
+                        <input type="button" value="">
+                        <i class="ri-arrow-right-up-line"></i>
+                    </div>
+                </div>
+                <h3 class="socials-heading">Socials</h3>
+                <div class="social-links">
+                    <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="rights">© 2025 All Rights Reserved</p>
+            <a href="#" class="privacy">Privacy Policy</a>
+        </div>
     </div>
+
+
+    </div>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- script for particlejs effect -->
     <script src="particles.js"></script>
     <script src="app.js"></script>
