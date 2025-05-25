@@ -162,7 +162,7 @@ html , body{
 
 #landingMain h1{
     /* font-family: 'Bebas Neue'; */
-    font-size: clamp(5rem, 12vw, 12rem);
+    font-size: clamp(4rem, 10vw, 10rem);
     opacity: .6;
 }
 
