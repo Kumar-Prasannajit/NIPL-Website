@@ -345,7 +345,7 @@ html , body{
 
 #footer{
     width: 100%;
-    min-height: 70vh;
+    min-height: 60vh;
     background-color: #00246B;
     border-bottom: 1.5px solid #CADCFC;
     display: flex;

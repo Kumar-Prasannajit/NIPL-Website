@@ -1,3 +1,16 @@
+// Initialize Lenis
+const lenis = new Lenis({
+    duration: 1.2,
+    smooth: true
+});
+
+// Create RAF loop for Lenis
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 document.addEventListener('DOMContentLoaded', () => {
     const barIcon = document.querySelector('#baricon');
     const menuOverlay = document.querySelector('.menu-overlay');
