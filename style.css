@@ -9,6 +9,22 @@ html , body{
     width: 100%;
 }
 
+/* Hide scrollbar for all elements */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ensure body still scrolls smoothly */
+body {
+    overflow-y: scroll;
+}
+
 #minicircle{
     transition: cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
     background-color: #fff;
@@ -287,6 +303,7 @@ html , body{
     background-color: #00246B;
     overflow: hidden;
     
+    
 }
 
 #floatinghead {
@@ -323,6 +340,38 @@ html , body{
     border-radius: 50%;
 }
 
+#grid{
+    height: 50%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#domaindesc{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#domaindesc .data{
+    width: 40%;
+    margin-bottom: 2vw;
+    padding: 0 2vw;
+}
+
+.data h2{
+    color: #CADCFC;
+    text-align: right;
+    font-size: 1.1vw;
+}
+
+.data h2 span{
+    text-transform: capitalize;
+    font-family: 'Sacramento', cursive;
+    color: #FCA311;
+    font-size: 1.5vw;
+}
 
 #page2 {
     padding-top: clamp(4vw, 8vw, 10vw);
