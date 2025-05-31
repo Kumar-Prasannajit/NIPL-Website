@@ -261,6 +261,7 @@ html , body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-bottom: 1px solid #CADCFC;
 }
 
 #infopage h2{
@@ -279,6 +280,49 @@ html , body{
   color: #FCA311;
   font-weight: 300;
 }
+
+#domains{
+    height: 100vh;
+    width: 100%;
+    background-color: #00246B;
+    overflow: hidden;
+    
+}
+
+#floatinghead {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.scroll-item {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 0 1vw;
+    white-space: nowrap;
+}
+
+.scroll-item h1 {
+    font-family: 'Bebas Neue';
+    font-size: 8vw;
+    color: #CADCFC;
+    font-weight: 650;
+}
+
+.fullstop {
+    height: 2vw;
+    width: 2vw;
+    background-color: #FCA311;
+    border-radius: 50%;
+}
+
 
 #page2 {
     padding-top: clamp(4vw, 8vw, 10vw);

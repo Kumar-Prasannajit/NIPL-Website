@@ -137,3 +137,85 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ...existing code...
+
+    // Add variables for navbar hide/show functionality
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('#nav');
+    const navbarHeight = navbar.offsetHeight;
+    let scrollTimeout;
+
+    // Function to hide navbar
+    const hideNavbar = () => {
+        if (window.scrollY > document.querySelector('#landingPage').offsetHeight) {
+            gsap.to(navbar, {
+                y: -navbarHeight,
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
+        }
+    };
+
+    // Set initial timeout to hide navbar after 1 second
+    scrollTimeout = setTimeout(hideNavbar, 1000);
+
+    window.addEventListener('scroll', () => {
+        // Clear the timeout on scroll
+        clearTimeout(scrollTimeout);
+        
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Only apply scroll behavior after landing page
+        if (scrollTop > document.querySelector('#landingPage').offsetHeight) {
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                gsap.to(navbar, {
+                    y: -navbarHeight,
+                    duration: 0.3,
+                });
+            } else {
+                // Scrolling up
+                gsap.to(navbar, {
+                    y: 0,
+                    duration: 0.3,
+                });
+            }
+            
+            // Set new timeout after scroll stops
+            scrollTimeout = setTimeout(hideNavbar, 1000);
+        } else {
+            // Reset navbar position when on landing page
+            gsap.to(navbar, {
+                y: 0,
+                duration: 0.3,
+            });
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
+});
+
+function createInfiniteLoop() {
+    const track = document.querySelector(".scroll-track");
+    const item = document.querySelector(".scroll-item");
+
+    const itemWidth = item.offsetWidth;
+
+    // Duplicate items to make it seamless
+    track.appendChild(item.cloneNode(true));
+    track.appendChild(item.cloneNode(true)); // optional second clone for better smoothness
+
+    gsap.to(track, {
+        x: `-=${itemWidth}`,
+        duration: 10,
+        ease: "none",
+        repeat: -1,
+        modifiers: {
+            x: gsap.utils.unitize(x => parseFloat(x) % itemWidth)
+        }
+    });
+}
+
+createInfiniteLoop();
