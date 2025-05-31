@@ -301,9 +301,7 @@ body {
     height: 100vh;
     width: 100%;
     background-color: #00246B;
-    overflow: hidden;
-    
-    
+    overflow: hidden; 
 }
 
 #floatinghead {
@@ -346,6 +344,45 @@ body {
     /* background-color: red; */
 }
 
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 25%; /* 3 slides visible */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    padding: 1vw 1vw;
+    gap: 3vw;
+}
+
+.box {
+    height:13vw;
+    margin: 4vw 0vw;
+    border-left: 1px solid #cadcfc5c;
+}
+
+.box h2{
+    font-size: 2vw;
+    letter-spacing: 0.1vw;
+    font-family: 'Bebas Neue';
+}
+
+.box h3{
+    width: 80%;
+    font-size: 1vw;
+    text-align: left;
+}
+
 #domaindesc{
     height: 30%;
     width: 100%;
@@ -356,7 +393,7 @@ body {
 
 #domaindesc .data{
     width: 40%;
-    margin-bottom: 2vw;
+    margin-bottom: 4vw;
     padding: 0 2vw;
 }
 
