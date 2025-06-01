@@ -226,3 +226,17 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     grabCursor: true,
   });
+
+  // Add this inside your DOMContentLoaded event listener
+const grid = document.querySelector('#grid');
+const minicircle = document.querySelector('#minicircle');
+
+grid.addEventListener('mouseenter', () => {
+    minicircle.classList.add('enlarged');
+    minicircle.innerHTML = '<span><h2><i class="ri-contract-right-line"></i></h2></span>';
+});
+
+grid.addEventListener('mouseleave', () => {
+    minicircle.classList.remove('enlarged');
+    minicircle.innerHTML = '';
+});
