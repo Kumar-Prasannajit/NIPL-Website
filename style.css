@@ -102,8 +102,9 @@ body {
 
 #nav .menuDiv{
     /* background-color: red; */
-    width: 6vw;
+    width: fit-content;
     display: flex;
+    gap: 2vw;
     justify-content: space-between;
     align-items: center;
 }
