@@ -14,11 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./I.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
@@ -251,7 +247,15 @@
             </div>
         </div>
         <div id="team">
-            <h1>OUR TEAM</h1>
+            <div class="grid grid-cols-8 grid-rows-3 gap-2 overflow-hidden">
+            <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 3;"><img src="./img/1.jpg" alt="1"></div>
+            <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 7;"><img src="./img/2.jpg" alt="2"></div>
+            <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 2;"><img src="./img/3.jpg" alt="3"></div>
+            <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 6;"><img src="./img/4.jpg" alt="4"></div>
+            <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 4;"><img src="./img/5.jpg" alt="5"></div>
+            <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 8;"><img src="./img/6.jpg" alt="6"></div>
+            <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 1;"><img src="./img/7.jpg" alt="7"></div>
+        </div>
         </div>
         <div id="footer">
             <div id="footerleft">

@@ -9,6 +9,10 @@ html , body{
     width: 100%;
 }
 
+html{
+    scroll-behavior: smooth;
+    }
+
 /* Hide scrollbar for all elements */
 * {
     -ms-overflow-style: none;  /* IE and Edge */
@@ -657,6 +661,10 @@ body {
     justify-content: space-between;
 }
 
+.grid>div {
+            grid-row: var(--r);
+            grid-column: var(--c);
+        }
 
 #footerleft{
     height: 100%;
