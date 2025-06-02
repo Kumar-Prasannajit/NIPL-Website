@@ -369,3 +369,83 @@ document.querySelectorAll(".elem").forEach(elem => {
         }
     })
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.elem img').forEach(img => {
+        const teamCard = document.createElement('div');
+        teamCard.className = 'team-card';
+        let isHovered = false;
+        
+        img.addEventListener('mouseenter', () => {
+            isHovered = true;
+            const memberData = JSON.parse(img.dataset.member || '{}');
+            
+            // Create social links HTML
+            const socialLinks = Object.entries(memberData.socials || {})
+                .map(([platform, icon]) => `
+                    <a href="#" class="${platform}-link">
+                        ${icon}
+                    </a>
+                `).join('');
+
+            teamCard.innerHTML = `
+                <img src="${img.src}" alt="${memberData.name || 'Team Member'}">
+                <div class="separator"></div>
+                <h2>${memberData.name || 'Team Member'}</h2>
+                <div class="separator"></div>
+                <h3>${memberData.role || 'Role'}</h3>
+                <div class="separator"></div>
+                <div class="socials">
+                    ${socialLinks}
+                </div>
+                <div class="separator"></div>
+                <p>${memberData.bio || 'Team member bio'}</p>
+            `;
+            
+            // Position card next to image
+            const rect = img.getBoundingClientRect();
+            const vpWidth = window.innerWidth;
+            const cardWidth = 300;
+            
+            teamCard.style.position = 'fixed';
+            teamCard.style.top = `${rect.top}px`;
+            
+            if (rect.left > vpWidth / 2) {
+                teamCard.style.left = `${rect.left - cardWidth - 20}px`;
+            } else {
+                teamCard.style.left = `${rect.right + 20}px`;
+            }
+            
+            document.body.appendChild(teamCard);
+            requestAnimationFrame(() => {
+                teamCard.classList.add('active');
+            });
+        });
+
+        // Add mouseleave handlers for both the image and the card
+        const handleMouseLeave = (e) => {
+            // Check if we're not moving between the card and image
+            const toElement = e.relatedTarget;
+            if (!teamCard.contains(toElement) && toElement !== img) {
+                isHovered = false;
+                // Small delay to allow for mouse movement between elements
+                setTimeout(() => {
+                    if (!isHovered) {
+                        teamCard.classList.remove('active');
+                        setTimeout(() => {
+                            if (!isHovered) {
+                                teamCard.remove();
+                            }
+                        }, 300);
+                    }
+                }, 100);
+            }
+        };
+
+        img.addEventListener('mouseleave', handleMouseLeave);
+        teamCard.addEventListener('mouseleave', handleMouseLeave);
+        teamCard.addEventListener('mouseenter', () => {
+            isHovered = true;
+        });
+    });
+});

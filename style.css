@@ -79,7 +79,7 @@ body {
 
 #nav {
     color: white;
-    padding: 28px 35px;
+    padding: 20px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,8 +156,8 @@ body {
 .menu-overlay {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0; /* Changed from left to right */
+    width: 50%; /* Set to 50% width */
     height: 100vh;
     background-color: #FCA311;
     transform: translateX(100%);
@@ -169,30 +169,24 @@ body {
     transform: translateX(0);
 }
 
-.mobile-menu {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.mobile-menu{
+    padding-top: 6vw;
+    padding-left: 2vw;
 }
 
-.mobile-menu a {
+.custom-hr{
     color: #00246B;
-    text-decoration: none;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all 0.3s ease;
 }
 
-.mobile-menu a:hover {
-    opacity: 0.7;
+.mobile-menu h1 a{
+    color: #00246B;
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 6vw;
+    line-height: 100%;
 }
 
 #landingMain{
-    /* background-color: wheat; */
     width: 70%;
     color: #CADCFC;
     padding-top: 30px;
@@ -203,9 +197,9 @@ body {
 }
 
 #landingMain h1{
-    /* font-family: 'Bebas Neue'; */
     font-size: clamp(4rem, 10vw, 10rem);
     opacity: .6;
+    line-height: 80%;
 }
 
 .hero-heading {
@@ -426,7 +420,7 @@ body {
 
 #domaindesc .data{
     width: 38%;
-    margin-bottom: 3.5vw;
+    margin-bottom: 6vw;
     padding: 0 2vw;
 }
 
@@ -618,6 +612,7 @@ body {
 .sbox-content h2 {
     color: #FCA311;
     padding: 1vw 1vw;
+    font-size: 1.3vw;
 }
 
 .sbox-hover {
@@ -650,6 +645,115 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: #CADCFC;
+    position: relative;
+    overflow: hidden;
+}
+
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    font-family: 'Bebas Neue';
+    color: rgba(0, 36, 107, 0.315);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.grid>div {
+            grid-row: var(--r);
+            grid-column: var(--c);
+        }
+
+.team-card {
+    position: fixed;
+    background: #00246B;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.team-card.active {
+    opacity: 1;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+.team-card .separator {
+    height: 2px;
+    background: #FCA311;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.team-card h2 {
+    color: #CADCFC;
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.team-card h3 {
+    color: #CADCFC;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.team-card .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.team-card .socials a {
+    color: #CADCFC;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.team-card .socials a:hover {
+    color: #FCA311;
+    transform: translateY(-2px);
+}
+
+.team-card .socials i {
+    font-size: 1.5rem;
+}
+
+.team-card p {
+    color: #CADCFC;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.elem {
+    position: relative;
+    cursor: pointer;
+}
+
+.elem img {
+    transition: transform 0.3s ease;
+}
+
+.elem:hover img {
+    transform: scale(1.05);
 }
 
 #footer{
@@ -660,11 +764,6 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
-.grid>div {
-            grid-row: var(--r);
-            grid-column: var(--c);
-        }
 
 #footerleft{
     height: 100%;
@@ -985,6 +1084,15 @@ body {
     #elem h4 {
         font-size: 1rem;
         padding-left: 5px;
+    }
+
+    .mobile-menu {
+        padding: 80px 0;
+        gap: 2rem;
+    }
+    
+    .mobile-menu a {
+        font-size: clamp(1.2rem, 3vw, 2rem);
     }
 }
 
