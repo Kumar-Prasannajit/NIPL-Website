@@ -96,7 +96,7 @@ body {
     font-weight: 585;
     color: white;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     text-transform: uppercase;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 #nav .menuDiv h4{
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     text-transform: uppercase;
 }
 
@@ -220,14 +220,15 @@ body {
 #landingfooter{
     width: 100%;
     height: 50px;
-    /* background-color: red; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 12vw;
     padding: 10px 30px;
 }
 
 .lfooter3{
+    margin-bottom: .8vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +299,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-bottom: 1px solid #CADCFC;
 }
 
 #infopage h2{
@@ -324,125 +324,124 @@ body {
     transform-origin: bottom left;
 }
 
-#domains{
-    height: 100vh;
-    width: 100%;
-    background-color: #00246B;
-    overflow: hidden; 
-}
+#domains {
+      min-height: 100vh;
+      width: 100%;
+      background-color: #00246B;
+      overflow: hidden;
+    }
 
-#floatinghead {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
+    #floatinghead {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
 
-.scroll-track {
-    display: flex;
-    width: max-content;
-    will-change: transform;
-}
+    .scroll-track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+    }
 
-.scroll-item {
-    display: flex;
-    align-items: center;
-    gap: 2vw;
-    padding: 0 1vw;
-    white-space: nowrap;
-}
+    .scroll-item {
+      display: flex;
+      align-items: center;
+      gap: 2vw;
+      padding: 0 1vw;
+      white-space: nowrap;
+    }
 
-.scroll-item h1 {
-    font-family: 'Bebas Neue';
-    font-size: 8vw;
-    color: #CADCFC;
-    font-weight: 650;
-}
+    .scroll-item h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 8vw;
+      color: #CADCFC;
+      font-weight: 650;
+    }
 
-.fullstop {
-    height: 2vw;
-    width: 2vw;
-    background-color: #FCA311;
-    border-radius: 50%;
-}
+    .fullstop {
+      height: 2vw;
+      width: 2vw;
+      background-color: #FCA311;
+      border-radius: 50%;
+    }
 
-#grid{
-    height: fit-content;
-    width: 100%;
-    /* background-color: red; */
-}
+    #grid {
+      height: fit-content;
+      width: 100%;
+    }
 
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
 
-.swiper-wrapper {
-    display: flex;
-}
+    .swiper-wrapper {
+      display: flex;
+    }
 
-.swiper-slide {
-    flex-shrink: 0;
-    width: 25%; /* 3 slides visible */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    color: #CADCFC;
-    padding: 1vw 1vw;
-    gap: 2vw;
-}
+    .swiper-slide {
+      flex-shrink: 0;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      color: #CADCFC;
+      padding: 1vw;
+      gap: 2vw;
+    }
 
-.box {
-    height:14vw;
-    margin: 5vw 0vw;
-    border-left: 1px solid #cadcfc5c;
-}
+    .box {
+      height: 14vw;
+      margin: 5vw 0;
+      border-left: 1px solid #cadcfc5c;
+    }
 
-.box h2{
-    font-size: 2.3vw;
-    color: #FCA311;
-    letter-spacing: 0.1vw;
-    font-family: 'Bebas Neue';
-}
+    .box h2 {
+      font-size: 2.3vw;
+      color: #FCA311;
+      letter-spacing: 0.1vw;
+      font-family: 'Bebas Neue', sans-serif;
+    }
 
-.box h3{
-    width: 80%;
-    font-size: 1.2vw;
-    text-align: left;
-}
+    .box h3 {
+      width: 80%;
+      font-size: 1.2vw;
+      text-align: left;
+    }
 
-#domaindesc{
-    height: 30%;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
+    #domaindesc {
+      height: 30%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
 
-#domaindesc .data{
-    width: 38%;
-    margin-bottom: 6vw;
-    padding: 0 2vw;
-}
+    #domaindesc .data {
+      width: 38%;
+      margin-bottom: 6vw;
+      padding: 0 2vw;
+    }
 
-.data h2{
-    color: #CADCFC;
-    text-align: right;
-    font-size: 1vw;
-}
+    .data h2 {
+      color: #CADCFC;
+      text-align: right;
+      font-size: 1vw;
+    }
 
-.data h2 span{
-    text-transform: capitalize;
-    font-family: 'Sacramento', cursive;
-    color: #FCA311;
-    font-size: 1.5vw;
-}
+    .data h2 span {
+      text-transform: capitalize;
+      font-family: 'Sacramento', cursive;
+      color: #FCA311;
+      font-size: 1.5vw;
+    }
 
 #page2 {
     padding-top: clamp(1vw, 1vw, 1vw);
     padding-left: clamp(2.5vw, 4vw, 4vw);
     width: 100%;
-    min-height: 100vh;
+    height: fit-content;
     padding-bottom: clamp(4vw, 8vw, 10vw);
     background-color: #CADCFC;
 }
@@ -667,83 +666,6 @@ body {
             grid-column: var(--c);
         }
 
-.team-card {
-    position: fixed;
-    background: #00246B;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 300px;
-    opacity: 0;
-    transform: translateX(0);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    pointer-events: auto;
-}
-
-.team-card.active {
-    opacity: 1;
-}
-
-.team-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-}
-
-.team-card .separator {
-    height: 2px;
-    background: #FCA311;
-    margin: 1rem auto;
-    width: 80%;
-}
-
-.team-card h2 {
-    color: #CADCFC;
-    font-family: 'Bebas Neue';
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5rem 0;
-}
-
-.team-card h3 {
-    color: #CADCFC;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.team-card .socials {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 1rem 0;
-}
-
-.team-card .socials a {
-    color: #CADCFC;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.team-card .socials a:hover {
-    color: #FCA311;
-    transform: translateY(-2px);
-}
-
-.team-card .socials i {
-    font-size: 1.5rem;
-}
-
-.team-card p {
-    color: #CADCFC;
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: center;
-}
-
 .elem {
     position: relative;
     cursor: pointer;
@@ -755,6 +677,45 @@ body {
 
 .elem:hover img {
     transform: scale(1.05);
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5vw;
+}
+
+.flip-card-back h2 {
+    color: #00246B;
+    font-family: 'Bebas Neue';
+    font-size: 2.5vh;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.flip-card-back .designation {
+    color: #00246B;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.social-links-team {
+    display: flex;
+    gap: 1.5vw;
+    margin-top: 0.5vw;
+}
+
+.social-links-team a {
+    color: #00246B;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links-team a:hover {
+    color: #FCA311;
+    transform: translateY(-2px);
 }
 
 #footer{
@@ -942,238 +903,515 @@ body {
 
 
 @media screen and (max-width: 768px) {
-    :root {
-    --content-top-margin: 10%; /* Adjust this value to move content up/down */
-    }
-    #nav {
-        padding: 30px;
-    }
 
-    #nav a {
-        font-size: .9rem;
-    }
+#minicircle{
+    display: none;
+}
+   #landingPage{
+    width: 100%;
+    height: 100vh;
+    background-color: #00246b;
+    position: relative;
+    padding-top: 55px; /* Add padding to account for fixed nav */
+}
 
-    #landingMain {
-        width: 100%;
-    }
+#nav {
+    color: white;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CADCFC;
+    background-color: #00246b;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 
-    #landingMain h1{
-    /* font-family: 'Bebas Neue'; */
-    font-size: clamp(6rem, 13vw, 13rem);
-    opacity: .6;
-    line-height: 100%;
-    }
+#nav a{
+    font-weight: 585;
+    color: white;
+    text-decoration: none;
+    font-size: 2vh;
+    text-transform: uppercase;
+}
 
-    #minicircle{
-        display: none;
-    }
+#nav .menuDiv{
+    margin-right: 2vh;
+    width: fit-content;
+    display: flex;
+    gap: 2vw;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .menuDiv .bounding h4{
-        display: none;
-    }
+#nav .menuDiv h4{
+    display: none;
+}
 
-    #baricon {
-    width: 40px;
+#baricon {
+    width: 20px;
     height: 12px;
-    margin-right: 10px;
-    }
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
 
-    #landingfooter{
-        margin-top: 100px;
-    }
+#baricon::before, #baricon::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    background-color: #CADCFC;
+    transition: all 0.4s ease-in-out;
+}
 
-    .hero-heading {
-        font-size: 3.5rem;
-    }
+#baricon::before {
+    width: 70%;
+    top: 0;
+    height: 2px;
+}
 
-    .sacramento {
-        font-size: 3.5rem;
-    }
+#baricon::after {
+    width: 70%;
+    bottom: 0;
+    height: 2px;
+}
 
-    #landingfooter {
-        padding: 10px 20px;
-        flex-direction: column;
-        height: auto;
-        gap: 15px;
-    }
+#baricon.active::before, #baricon.active::after {
+    background-color: #00246b;
+}
 
-    .lfooter2 {
-        order: -1;
-    }
+#baricon.active::before {
+    transform: translateY(5px) rotate(45deg);
+}
 
-    #slashtxt a {
-        font-size: 1rem;
-    }    .sacramentoinfo {
-    text-transform: capitalize;
-    font-size: 2rem;
-    font-weight: 300;
-    display: block;
+#baricon.active::after {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.mobile-menu{
+    padding-top: 20vw;
+    padding-left: 2vw;
+}
+
+.mobile-menu h1 a{
+    font-size: 7vh;
+}
+
+#landingMain{
+    width: 90%;
+    height: fit-content;
+    padding-top: 40px;
+    padding-left: 10px;
+    line-height: 1; 
+}
+
+#landingMain h1{
+    font-size: clamp(6rem, 35vw, 6.8rem);
+    line-height: 85%;
+}
+
+.hero-heading {
+  font-size: 4.5vw;
+  letter-spacing: 1px;
+}
+
+.sacramento {
+  font-size: 5.35vh;
+}
+
+#landingfooter{
+    width: 100%;
+    margin-top: 12vh;
+    justify-content: center;
+    padding: 0;
+    gap: 18vw;
+}
+
+.lfooter3{
+    margin-bottom: 1.3vw;
+}
+
+#slashtxt a{
+    font-size: 1.7vh;
+}
+
+.slash-image {
+    height: 10px;
+}
+
+.footer-link {
+    font-size: 1.7vh;
+}
+
+ #infopage {
+    padding: 30px 45px;
+    min-height: 50vh;
+  }
+
+#infopage h2.splittext {
+    font-size: 4.5vw !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.5px !important;
     text-align: center;
-    margin: 10px 0;
-    }
+  }
 
-    #infopage {
-        padding: 40px 20px;
-    }
+.sacramentoinfo {
+    font-size: 3.5vh !important;
+  }
 
-    #infopage h2 {
+ /* Hide Swiper behavior on mobile */
+  .swiper-container, .swiper-wrapper {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    all: unset;
+    display: block;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid #fca311;
+    border-bottom: 1px solid #FCA311;
+  }
+
+  .swiper-slide h2 {
+    font-size: 5vw;
+    color: #fca311;
+    margin-bottom: 10px;
+  }
+
+  .swiper-slide h3 {
+    font-size: 4vw;
+    color: white;
+    line-height: 1.5;
+  }
+
+  #floatinghead {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .scroll-item h1 {
+    font-size: 6vw;
+    color: white;
+    margin: 0 auto;
+    line-height: 1.3;
+  }
+
+  #domaindesc {
+    margin-top: 30px;
+    padding: 0 16px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #domaindesc .data{
+    width: 90%;
+  }
+
+  #domaindesc h2 {
+    font-size: 4.2vw;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  #domaindesc h2 span {
+    color: #fca311;
+    font-weight: 700;
+    font-size: 2.2vh;
+  }
+
+  /* Prevent scrolling overlap */
+  body {
+    overflow-x: hidden;
+  }
+
+#page2 {
+    padding-top: clamp(1vh, 1vh, 1vh);
+}
+
+.page2-heading {
+    font-size: clamp(2vh, 5vh, 5vh);
+    margin-bottom: 2vh;
+    padding-right: 5vh;
+}
+
+#elem {
+    width: 95%;
+    height: calc(clamp(2vh, 4vh, 4vh) * 2.5);
+    padding: clamp(1.5vh, 4vh, 4vh) 1.5vh;
+}
+
+#elem h1 {
+    font-size: clamp(1.5vh, 4vh, 4vh);
+}
+
+#elem h4 {
+    font-size: clamp(0.8vh, 1.2vh, 1.2vh);
+}
+
+#supporttop{
+    height: 40%;
+    width: 100%;
+    display: flex;
+}
+
+
+#stop-left{
+    height: 100%;
+    width: 40%;
+}
+
+#stop-left h1{
+    font-family: 'Bebas Neue';
+    color: #00246B;
+    font-size: 8vh;
+    line-height: 75%;
+    letter-spacing: .5vh;
+    padding: 0 1vh;
+}
+
+#stop-left h1 span{
+    color: #FCA311;
+    font-family: 'Sacramento';
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+#stop-right{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 1vh 1vh;
+}
+
+#stop-right h2{
+    color: #00246B;
+    font-size: 1.5vh;
+    width: 70%;
+    text-align: right;
+}
+
+#stop-right-p2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+}
+
+#stop-right-p2 h4{
+    padding: 3px 3px;
+    font-size: 1.3vh;
+}
+
+#stop-right-p2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#stop-right-p2 h4 a{
+    text-decoration: none;
+    color: #00246B;
+    position: relative;
+    z-index: 9;
+}
+
+#stop-right-p2 h4:hover a{
+    color: #CADCFC;
+}
+
+.sbox.shrunk {
+    flex: 1 1 calc(10% - 8px); /* 50% of the original 20% */
+}
+
+#supportuspage{
+    width: 100%;
+    background-color: #CADCFC; 
+    margin-top: 10vh;
+    height: 75vh;
+}
+
+#suppotbottom{
+    margin-top: 100vh;
+}
+
+.sbox {
+    flex: 1 1 calc(20% - 8px);
+    height: 120px;
+    min-width: 60px;
+    overflow: hidden;
+    transition: flex 0.6s ease;
+}
+
+.sbox.expanded {
+    flex: 1 1 100%;
+    z-index: 1;
+}
+
+.sbox-content,
+.sbox-hover {
+    transition: opacity 0.4s ease-in-out;
+}
+
+.flip-card-back h2 {
+    padding-top: .7vh;
         font-size: 1rem;
-        display: block;
-        margin: 5px 0;
-        line-height: 1.5;
+    }
+    
+    .flip-card-back .designation {
+        font-size: 0.9rem;
         text-align: center;
-        letter-spacing: 2px;
-        font-family: 'Syne';
-        font-weight: 400;
+    }
+    
+    .social-links-team a {
+        font-size: 1.1rem;
     }
 
-    #footer {
+    .flip-card-back h2,
+.flip-card-back .designation,
+.social-links-team {
+    width: 200%;
+    text-align: center;
+    display: block; /* for h2 and .designation */
+    margin-left: -10%; /* shift left to visually center 200% width */
+}
+
+.social-links-team {
+    display: flex;
+    justify-content: center;
+    margin-left: -10%; /* for 200% width */
+}
+
+
+.flip-card {
+  width: 100%;
+  max-width: 200px; /* previously 160px */
+  height: 260px;     /* previously 220px */
+}
+
+img{
+    max-width: 200%;
+}
+
+.flip-card-back{
+    width: 200%;
+    padding: 0;
+}
+
+ #footer {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding-bottom: 40px;
     }
 
-    #footerleft, #footeright {
-        width: 100%;
-        padding: 20px;
+    #footerleft, 
+    #footeright {
+        width: 90%;
+        height: auto;
     }
 
     #footerleft h1 {
-        text-align: center;
-        line-height: 0.8;
-        padding: 20px 10px;
-    }
-
-    #email {
-        padding: 20px;
-    }
-
-    #mail {
-        width: 80%;
+        font-size: clamp(2.5rem, 10vw, 5rem);
+        padding: 5px 10px;
+        line-height: 1;
     }
 
     #copyright {
         flex-direction: column;
-        text-align: center;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #copyright h4,
+    .address {
+        padding: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    #footeright h2 {
+        padding-top: 30px;
+        font-size: 1.5rem;
+    }
+
+    #email {
+        flex-direction: column;
+        padding: 20px 0;
         gap: 10px;
     }
 
-    #page2 {
-        padding: 60px 15px;
+    #mail {
+        width: 80%;
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 
-    .page2-heading {
-        font-size: clamp(2rem, 4vw, 4rem);
-        margin-bottom: 1rem;
-        font-weight: 400;
+    #btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    #email i {
+        font-size: 1.2rem;
+    }
+
+    .socials-heading {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
         text-align: center;
     }
 
-    #elem {
-        width: 95%;
-        height: auto;
-        padding: 20px 15px;
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+    .rights,
+    .privacy {
+        font-size: 0.85rem;
     }
 
-    #elem h1 {
-        font-size: clamp(2rem, 8vw, 4rem);
-        line-height: 1;
-    }
-
-    #elem h4 {
-        font-size: 1rem;
-        padding-left: 5px;
-    }
-
-    .mobile-menu {
-        padding: 80px 0;
-        gap: 2rem;
-    }
-    
-    .mobile-menu a {
-        font-size: clamp(1.2rem, 3vw, 2rem);
-    }
 }
 
 @media screen and (max-width: 480px) {
-    :root {
-    --content-top-margin: 10%; /* Adjust this value to move content up/down */
-    }
-    #landingPage #nav a {
-        font-size: 1rem;
-    }
 
-    #nav .menuDiv h4 {
-        font-size: 0.9rem;
-    }
+   .sbox {
+            width: calc(20% - 8px); /* Maintain 5 boxes even on smaller screens */
+            height: 100px;
+        }
 
-    .hero-heading {
-        font-size: 2.5rem;
-    }
+        .sbox-content h2 {
+            font-size: 12px;
+        }
 
-    .sacramento {
-        font-size: 2.5rem;
-    }
-
-    #landingMain {
-        margin-top: var(--content-top-margin);
-        padding-top: 15px;
-    }
-
-    #slashimg {
-        height: 15px;
-        width: 15px;
-        padding: 0px 5px;
-    }
-
-    #slashimg img {
-        height: 15px;
-        width: 15px;
-    }
-
-    .lfooter3 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .slash-image {
-        height: 12px;
-        width: auto;
-    }
-
-    .footer-link {
-        font-size: 1rem;
-    }
-
-    #page2 {
-        padding: 40px 10px;
-    }
-
-    #elem {
-        width: 100%;
-        padding: 15px 10px;
-    }
-
-    #elem h1 {
-        font-size: clamp(1.5rem, 7vw, 3rem);
-    }
-
-    #elem h4 {
-        font-size: 0.9rem;
-    }
+        .sbox-content svg {
+            width: 100%;
+            height: auto;
+        }
 }
 
 @media screen and (max-height: 600px) {
-    #landingMain {
-        padding-top: 10px;
-    }
 
-    .hero-heading {
-        line-height: 1;
-    }
 }

@@ -50,7 +50,7 @@
             <div id="particles-js"></div>
             <div id="landingMain">
                 <div class="bounding">
-                    <h1 class="hero-heading bounding-elem">Building Deep Tech</h1>
+                    <h1 class="hero-heading bounding-elem" id="deepTechHeading">Building Deep Tech</h1>
                 </div>
                 <div class="bounding">
                     <h1 class="hero-heading bounding-elem">Solutions</h1>
@@ -63,7 +63,6 @@
                 </div>
             </div>
             <div id="landingfooter">
-                <div class="lfooter1"></div>
                 <div class="lfooter2" id="slashtxt">
                     <div class="bounding">
                         <a href="#" class="bounding-elem">See Our Projects <i class="ri-arrow-right-up-line"></i></a>
@@ -90,14 +89,6 @@
         <div id="domains">
             <div id="floatinghead">
                 <div class="scroll-track">
-                    <div class="scroll-item">
-                        <h1>WE BUILD SOLUTIONS THAT MATTER</h1>
-                        <div class="fullstop"></div>
-                    </div>
-                    <div class="scroll-item">
-                        <h1>WE BUILD SOLUTIONS THAT MATTER</h1>
-                        <div class="fullstop"></div>
-                    </div>
                     <div class="scroll-item">
                         <h1>WE BUILD SOLUTIONS THAT MATTER</h1>
                         <div class="fullstop"></div>
@@ -257,135 +248,179 @@
             </div>
         </div>
         <div id="team">
-    <h1 class="watermark">OUR TEAM</h1>
-    <div class="grid grid-cols-8 grid-rows-3 gap-2 overflow-hidden">
+            <h1 class="watermark">OUR TEAM</h1>
+            <div class="grid grid-cols-8 grid-rows-3 gap-2 overflow-hidden">
 
-        <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 3;">
-            <img src="./img/1.jpg" alt="Team Member 1" data-member='{
-                "name": "Dr. Tusharkant Panda",
-                "role": "CEO & Founder",
-                "bio": "Passionate about technology and innovation, leading the vision of NIPL.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
+                <!-- Team Member 1 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 3;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/1.jpg" alt="Dr. Tusharkant Panda">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Dr. Tusharkant Panda</h2>
+                                <p class="designation">CEO & Founder</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 7;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/2.jpg" alt="Padmini Mishra">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Padmini Mishra</h2>
+                                <p class="designation">Co-Founder & CTO</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 2;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/3.jpg" alt="Bhawani Sahu">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Bhawani Sahu</h2>
+                                <p class="designation">Lead Developer</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 6;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/4.jpg" alt="Ramkrushna Sahu">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Ramkrushna Sahu</h2>
+                                <p class="designation">UI/UX Designer</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 4;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/5.jpg" alt="Kumar Prasannajit Sahu">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Kumar Prasannajit Sahu</h2>
+                                <p class="designation">Fullstack Engineer</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 7;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/6.jpg" alt="Anurag Das">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Anurag Das</h2>
+                                <p class="designation">Research Analyst</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 2;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="./img/7.jpg" alt="Priyanshu Patro">
+                            </div>
+                            <div class="flip-card-back">
+                                <h2>Priyanshu Patro</h2>
+                                <p class="designation">Embedded Systems Engineer</p>
+                                <div class="social-links-team">
+                                    <a href="#" target="_blank"><i class="ri-instagram-fill"></i></a>
+                                    <a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 7;">
-            <img src="./img/2.jpg" alt="Team Member 2" data-member='{
-                "name": "Padmini Mishra",
-                "role": "Co-Founder & CTO",
-                "bio": "Driving the technology roadmap and team innovation.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
-        </div>
-
-        <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 2;">
-            <img src="./img/3.jpg" alt="Team Member 3" data-member='{
-                "name": "Bhawani Sahu",
-                "role": "Lead Developer",
-                "bio": "Handles frontend/backend systems with precision and efficiency.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
-        </div>
-
-        <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 6;">
-            <img src="./img/4.jpg" alt="Team Member 4" data-member='{
-                "name": "Ramkrushna Sahu",
-                "role": "UI/UX Designer",
-                "bio": "Focuses on user-centered designs and seamless experiences.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
-        </div>
-
-        <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 4;">
-            <img src="./img/5.jpg" alt="Team Member 5" data-member='{
-                "name": "Kumar Prasannajit Sahu",
-                "role": "Fullstack Engineer",
-                "bio": "Specialist in artificial intelligence and smart automation.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
-        </div>
-
-        <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 7;">
-            <img src="./img/6.jpg" alt="Team Member 6" data-member='{
-                "name": "Anurag Das",
-                "role": "Research Analyst",
-                "bio": "Works on data analysis and project insights for better strategy.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
-        </div>
-
-        <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 2;">
-            <img src="./img/7.jpg" alt="Team Member 7" data-member='{
-                "name": "Priyanshu Patro",
-                "role": "Embedded Systems Engineer",
-                "bio": "Designs and develops hardware solutions with software integration.",
-                "socials": {
-                    "github": "<i class=\"ri-github-fill\"></i>",
-                    "instagram": "<i class=\"ri-instagram-fill\"></i>",
-                    "linkedin": "<i class=\"ri-linkedin-fill\"></i>"
-                }
-            }'>
-        </div>
-
     </div>
-</div>
 
-        <div id="footer">
-            <div id="footerleft">
-                <h1>Navgyan</h1>
-                <h1>Innovations</h1>
-                <div id="copyright">
-                    <div class="company-info">
-                        <h4>Navgyan Innovations Private Limited</h4>
-                        <p class="address">Nilachakra Nagar, Gunupur,<br>Rayagada, Orissa, India, 765022</p>
-                    </div>
-                </div>
-            </div>
-            <div id="footeright">
-                <h2><span class="sacramentoinfo">Share</span> &nbsp; Your Vision</h2>
-                <div id="email">
-                    <input type="email" name="email" id="mail" placeholder="example@gmail.com">
-                    <div id="btn">
-                        <input type="button" value="">
-                        <i class="ri-arrow-right-up-line"></i>
-                    </div>
-                </div>
-                <h3 class="socials-heading">Socials</h3>
-                <div class="social-links">
-                    <a href="#"><i class="ri-twitter-x-fill"></i></a>
-                    <a href="#"><i class="ri-linkedin-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
+    <div id="footer">
+        <div id="footerleft">
+            <h1>Navgyan</h1>
+            <h1>Innovations</h1>
+            <div id="copyright">
+                <div class="company-info">
+                    <h4>Navgyan Innovations Private Limited</h4>
+                    <p class="address">Nilachakra Nagar, Gunupur,<br>Rayagada, Orissa, India, 765022</p>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="rights">© 2025 All Rights Reserved</p>
-            <a href="#" class="privacy">Privacy Policy</a>
+        <div id="footeright">
+            <h2><span class="sacramentoinfo">Share</span> &nbsp; Your Vision</h2>
+            <div id="email">
+                <input type="email" name="email" id="mail" placeholder="example@gmail.com">
+                <div id="btn">
+                    <input type="button" value="">
+                    <i class="ri-arrow-right-up-line"></i>
+                </div>
+            </div>
+            <h3 class="socials-heading">Socials</h3>
+            <div class="social-links">
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+            </div>
         </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="rights">© 2025 All Rights Reserved</p>
+        <a href="#" class="privacy">Privacy Policy</a>
+    </div>
     </div>
 
 
