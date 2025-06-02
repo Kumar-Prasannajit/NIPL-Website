@@ -319,6 +319,12 @@ body {
   font-weight: 300;
 }
 
+.splittext {
+    display: block;
+    overflow: hidden;
+    transform-origin: bottom left;
+}
+
 #domains{
     height: 100vh;
     width: 100%;
@@ -602,7 +608,7 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
-    transition: transform 0.5s ease, opacity 0.3s ease;
+    z-index: 1;
 }
 
 .sbox-content h2 {
@@ -621,9 +627,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
+    z-index: 2;
 }
 
 .sbox-hover h3 {
@@ -638,25 +642,10 @@ body {
     font-size: 2vw;
 }
 
-/* Hover animations */
-.sbox:hover .sbox-content {
-    transform: translateY(100%);
-    opacity: 0;
-}
-
-.sbox:hover .sbox-hover {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.1s ease, transform 0.1s ease;
-}
-
 #team{
     width: 100%;
     min-height: 100vh;
     background-color: #CADCFC;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #footer{

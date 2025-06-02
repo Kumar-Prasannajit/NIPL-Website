@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ...existing code...
 
     // Add variables for navbar hide/show functionality
     let lastScrollTop = 0;
@@ -239,4 +238,103 @@ grid.addEventListener('mouseenter', () => {
 grid.addEventListener('mouseleave', () => {
     minicircle.classList.remove('enlarged');
     minicircle.innerHTML = '';
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Select all lines of text
+    const lines = document.querySelectorAll(".splittext");
+
+    // Create animation for each line
+    gsap.from(lines, {
+        y: 100,
+        opacity: 0,
+        stagger: 0.1, // Increased stagger for more noticeable line effect
+        duration: 1.1,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: "#infopage",
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play none none reverse"
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // GSAP animations for sbox hover
+    document.querySelectorAll('.sbox').forEach(box => {
+        const content = box.querySelector('.sbox-content');
+        const hoverContent = box.querySelector('.sbox-hover');
+        let isAnimating = false;
+        let currentTl = null;
+        
+        // Set initial states
+        gsap.set(content, { y: 0, opacity: 1 });
+        gsap.set(hoverContent, { opacity: 0, y: 30 });
+        
+        // Mouse enter
+        box.addEventListener('mouseenter', () => {
+            if (isAnimating) {
+                currentTl?.kill();
+            }
+            
+            // Create timeline for sequenced animation
+            const tl = gsap.timeline({
+                onStart: () => isAnimating = true,
+                onComplete: () => isAnimating = false
+            });
+            
+            currentTl = tl;
+            
+            // First fade out existing content upward
+            tl.to(content, {
+                y: -50,
+                opacity: 0,
+                duration: 0.4,
+                ease: "power3.inOut"
+            })
+            // Then smoothly fade in hover content
+            .to(hoverContent, {
+                opacity: 1,
+                y: 0,
+                duration: 0.4,
+                ease: "power3.out"
+            });
+        });
+        
+        // Mouse leave
+        box.addEventListener('mouseleave', () => {
+            if (isAnimating) {
+                currentTl?.kill();
+            }
+            
+            // Hide hover content immediately
+            gsap.set(hoverContent, {
+                opacity: 0,
+                y: 30
+            });
+            
+            // Create new timeline for leave animation
+            const tl = gsap.timeline({
+                onStart: () => isAnimating = true,
+                onComplete: () => isAnimating = false
+            });
+            
+            currentTl = tl;
+            
+            // Reveal original content from bottom
+            tl.fromTo(content,
+                { y: 50, opacity: 0 },
+                { 
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    ease: "power3.out"
+                }
+            );
+        });
+    });
 });
