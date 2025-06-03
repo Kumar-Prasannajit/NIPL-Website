@@ -912,7 +912,7 @@ body {
     height: 100vh;
     background-color: #00246b;
     position: relative;
-    padding-top: 55px; /* Add padding to account for fixed nav */
+    padding-top: 55px;
 }
 
 #nav {
@@ -1003,13 +1003,13 @@ body {
 #landingMain{
     width: 90%;
     height: fit-content;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-left: 10px;
     line-height: 1; 
 }
 
 #landingMain h1{
-    font-size: clamp(6rem, 35vw, 6.8rem);
+    font-size: clamp(6rem, 25vw, 6.8rem);
     line-height: 85%;
 }
 
@@ -1019,12 +1019,12 @@ body {
 }
 
 .sacramento {
-  font-size: 5.35vh;
+  font-size: 6.5vh;
 }
 
 #landingfooter{
     width: 100%;
-    margin-top: 12vh;
+    margin-top: 2vh;
     justify-content: center;
     padding: 0;
     gap: 18vw;
