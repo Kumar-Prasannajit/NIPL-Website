@@ -1059,7 +1059,7 @@ body {
   }
 
 .sacramentoinfo {
-    font-size: 3.5vh !important;
+    font-size: 5.5vh !important;
   }
 
  /* Hide Swiper behavior on mobile */
@@ -1076,7 +1076,7 @@ body {
     display: block;
     border-radius: 12px;
     padding: 20px;
-    border-left: 4px solid #fca311;
+    /* border-left: 4px solid #fca311; */
     border-bottom: 1px solid #FCA311;
   }
 
@@ -1263,6 +1263,17 @@ body {
 .sbox-content,
 .sbox-hover {
     transition: opacity 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sbox-content h2{
+    font-size: 1.3vh;
+}
+
+.sbox-hover h3{
+    font-size: 1.05vh;
 }
 
 .flip-card-back h2 {
@@ -1271,7 +1282,7 @@ body {
     }
     
     .flip-card-back .designation {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         text-align: center;
     }
     
@@ -1282,22 +1293,20 @@ body {
     .flip-card-back h2,
 .flip-card-back .designation,
 .social-links-team {
-    width: 200%;
-    text-align: center;
-    display: block; /* for h2 and .designation */
-    margin-left: -10%; /* shift left to visually center 200% width */
+    width: 100%;
+    text-align: left;
+    
 }
 
 .social-links-team {
     display: flex;
-    justify-content: center;
-    margin-left: -10%; /* for 200% width */
+    justify-content: left;
 }
 
 
 .flip-card {
   width: 100%;
-  max-width: 200px; /* previously 160px */
+  max-width: 100px; /* previously 160px */
   height: 260px;     /* previously 220px */
 }
 
@@ -1306,7 +1315,7 @@ img{
 }
 
 .flip-card-back{
-    width: 200%;
+    width: 100%;
     padding: 0;
 }
 
@@ -1397,19 +1406,6 @@ img{
 
 @media screen and (max-width: 480px) {
 
-   .sbox {
-            width: calc(20% - 8px); /* Maintain 5 boxes even on smaller screens */
-            height: 100px;
-        }
-
-        .sbox-content h2 {
-            font-size: 12px;
-        }
-
-        .sbox-content svg {
-            width: 100%;
-            height: auto;
-        }
 }
 
 @media screen and (max-height: 600px) {
