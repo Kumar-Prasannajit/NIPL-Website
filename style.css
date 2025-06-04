@@ -1009,7 +1009,7 @@ body {
 }
 
 #landingMain h1{
-    font-size: clamp(6rem, 25vw, 6.8rem);
+    font-size: clamp(5.5rem, 25vw, 6rem);
     line-height: 85%;
 }
 
@@ -1024,7 +1024,7 @@ body {
 
 #landingfooter{
     width: 100%;
-    margin-top: 2vh;
+    margin-top: 7vh;
     justify-content: center;
     padding: 0;
     gap: 18vw;
