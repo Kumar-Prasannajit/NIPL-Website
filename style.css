@@ -223,7 +223,7 @@ body {
 }
 
 #landingMain {
-    width: 70%;
+    width: 80vw;
     color: #CADCFC;
     padding-top: 30px;
     padding-left: 33px;
@@ -233,7 +233,8 @@ body {
 }
 
 #landingMain h1 {
-    font-size: clamp(4rem, 10vw, 10rem);
+    width: 100%;
+    font-size: clamp(6rem, 13vw, 13rem);
     opacity: .6;
     line-height: 80%;
 }
@@ -248,7 +249,7 @@ body {
 .sacramento {
     text-transform: capitalize;
     font-family: 'Sacramento', cursive;
-    font-size: 4.5rem;
+    font-size: 5rem;
     color: #FCA311;
 }
 
@@ -327,19 +328,38 @@ body {
 }
 
 #infopage {
-    width: 100%;
-    min-height: 100vh;
+    padding: 50px 100px;
+    min-height: 60vh;
     background-color: #00246B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+}
+
+#supportedBy {
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#description {
+    width: 100%;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-#infopage h2 {
+#description h2 {
     color: #CADCFC;
-    font-size: 2.3vw;
-    line-height: 1.2;
+    font-size: 2vw;
+    line-height: 1.1;
     text-transform: capitalize;
     font-family: 'Bebas Neue';
     letter-spacing: 5px;
@@ -349,7 +369,7 @@ body {
     letter-spacing: 0cm;
     text-transform: capitalize;
     font-family: 'Sacramento', cursive;
-    font-size: 4.5rem;
+    font-size: 3vw;
     color: #FCA311;
     font-weight: 300;
 }
