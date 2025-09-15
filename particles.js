@@ -1539,3 +1539,14 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
   xhr.send();
 
 };
+
+// Forward click events through the canvas to elements underneath
+document.addEventListener('click', function (e) {
+  const canvas = document.querySelector('#particles-js canvas');
+  if (canvas && e.target === canvas) {
+    const elementBelow = document.elementFromPoint(e.clientX, e.clientY);
+    if (elementBelow && elementBelow !== canvas) {
+      elementBelow.click();
+    }
+  }
+});
