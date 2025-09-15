@@ -65,7 +65,8 @@
             <div id="landingfooter">
                 <div class="lfooter2" id="slashtxt">
                     <div class="bounding">
-                        <a href="#page2" class="bounding-elem">See Our Projects <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="#page2" class="bounding-elem">See Our Projects <i
+                                class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
                 <div class="lfooter3">
@@ -139,18 +140,22 @@
         <div id="page2">
             <h1 class="page2-heading">Our Works</h1>
             <div id="elem">
+                <img src="https://images.unsplash.com/photo-1757743066455-4b5b471cdb80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 <h1>Breath X</h1>
                 <h4>2024</h4>
             </div>
             <div id="elem">
+                <img src="https://images.unsplash.com/photo-1757575220500-f38895955636?q=80&w=1246&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 <h1>Surgescope</h1>
                 <h4>2024</h4>
             </div>
             <div id="elem">
+                <img src="https://images.unsplash.com/photo-1757479964316-8cc688dde5c5?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 <h1>ECHOFISH</h1>
                 <h4>2025</h4>
             </div>
             <div id="elem" class="elemlast">
+                <img src="https://images.unsplash.com/photo-1757796859729-270d1e3ad4d5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 <h1>Bridgework</h1>
                 <h4>2025</h4>
             </div>
@@ -166,9 +171,10 @@
                     <h2>Whether you're a researcher, investor, mentor, collaborator, or enthusiast, we welcome your
                         support in many forms:</h2>
                     <div id="stop-right-p2">
-                        <h4><a href="#">Partner With Us</a></h4>
-                        <h4><a href="#">Support Our Work</a></h4>
-                    </div>
+  <h4><a href="#" id="open-partner">Partner With Us</a></h4>
+  <h4><a href="#" id="open-support">Support Our Work</a></h4>
+</div>
+
                 </div>
             </div>
             <div id="supportbottom">
@@ -421,10 +427,70 @@
         <p class="rights">© 2025 All Rights Reserved</p>
         <a href="#" class="privacy">Privacy Policy</a>
     </div>
+
+    <!-- Overlay -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- Partner With Us Popup -->
+    <div class="modal" id="partner-modal">
+        <button class="close-btn" data-close>&times;</button>
+        <section class="partner-section">
+            <h2>Partner With Us</h2>
+            <p>We're building something meaningful—and we’d love to have you on board.</p>
+
+            <div class="partner-cards">
+                <div class="partner-card">
+                    <h3>Researchers</h3>
+                    <p>Collaborate on studies and co-author impactful work.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Investors</h3>
+                    <p>Explore our roadmap and vision for long-term impact.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Mentors</h3>
+                    <p>Guide our strategy, refine our product, and shape our growth.</p>
+                </div>
+            </div>
+
+            <form class="partner-form">
+                <h4>Get in Touch</h4>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Email Address" required />
+                <textarea placeholder="Tell us more..." rows="4"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </div>
 
+    <!-- Support Our Work Popup -->
+    <div class="modal" id="support-modal">
+        <button class="close-btn" data-close>&times;</button>
+        <section class="partner-section">
+            <h2>Support Our Work</h2>
+            <p>Your contributions help us grow and innovate.</p>
 
+            <div class="partner-cards">
+                <div class="partner-card">
+                    <h3>One-time Donation</h3>
+                    <p>Support us with a one-time contribution.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Monthly Sponsor</h3>
+                    <p>Help us plan long-term by sponsoring monthly.</p>
+                </div>
+            </div>
+
+            <form class="partner-form">
+                <h4>Contribute</h4>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Email Address" required />
+                <input type="number" placeholder="Amount (₹)" required />
+                <button type="submit">Donate</button>
+            </form>
+        </section>
     </div>
+
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="

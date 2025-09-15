@@ -523,6 +523,17 @@ body {
     text-transform: uppercase;
 }
 
+#elem img{
+    opacity: 0;
+    /* width: clamp(8rem, 16vw, 16rem); */
+    height: 140%;
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: none;
+}
+
 .elemlast {
     border-bottom: 1px solid #00246B;
 }
@@ -939,6 +950,113 @@ body {
 .privacy:hover {
     opacity: 1;
 }
+
+/* ==== Overlay & Modal ==== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #CADCFC;
+  border-radius: 2rem;
+  padding: 2rem;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1001;
+}
+
+/* Show modal */
+.modal.active,
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  background: #00246B;
+  color: #FCA311;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ==== Content Styling ==== */
+.partner-section {
+  font-family: 'Segoe UI', sans-serif;
+  color: #00246B;
+}
+
+.partner-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.partner-card {
+  background: #fff;
+  border: 2px solid #00246B;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.partner-card:hover {
+  border-color: #FCA311;
+  transform: translateY(-5px);
+}
+
+.partner-form input,
+.partner-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 2px solid #00246B;
+  border-radius: 0.8rem;
+}
+
+.partner-form button {
+  background: #FCA311;
+  color: #00246B;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.partner-form button:hover {
+  background: #00246B;
+  color: #FCA311;
+}
+
 
 
 @media screen and (max-width: 768px) {
