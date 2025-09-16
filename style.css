@@ -481,7 +481,7 @@ body {
 
 #description h2 {
     color: #CADCFC;
-    font-size: 2vw;
+    font-size: 1.5vw;
     line-height: 1.1;
     text-transform: capitalize;
     font-family: 'Bebas Neue';
@@ -492,7 +492,7 @@ body {
     letter-spacing: 0cm;
     text-transform: capitalize;
     font-family: 'Sacramento', cursive;
-    font-size: 3vw;
+    font-size: 2.2vw;
     color: #FCA311;
     font-weight: 300;
 }
@@ -679,159 +679,6 @@ body {
 
 .elemlast {
     border-bottom: 1px solid #00246B;
-}
-
-#supportuspage {
-    width: 100%;
-    height: 100vh;
-    background-color: #CADCFC;
-}
-
-#supporttop {
-    height: 40%;
-    width: 100%;
-    display: flex;
-}
-
-
-#stop-left {
-    height: 100%;
-    width: 40%;
-}
-
-#stop-left h1 {
-    font-family: 'Bebas Neue';
-    color: #00246B;
-    font-size: 8vw;
-    line-height: 75%;
-    letter-spacing: .5vw;
-    padding: 0 1vw;
-}
-
-#stop-left h1 span {
-    color: #FCA311;
-    font-family: 'Sacramento';
-    font-weight: 400;
-    letter-spacing: normal;
-}
-
-#stop-right {
-    height: 100%;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: .5vw 0;
-}
-
-#stop-right h2 {
-    color: #00246B;
-    font-size: 1.2vw;
-}
-
-#stop-right-p2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1vw;
-}
-
-#stop-right-p2 h4 {
-    font-weight: 500;
-    padding: 10px 20px;
-    border: 1px solid #00246ba7;
-    border-radius: 50px;
-    position: relative;
-    transition: all ease 0.4s;
-    overflow: hidden;
-    color: #00246B;
-}
-
-#stop-right-p2 h4::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #00246B;
-    left: 0;
-    bottom: -100%;
-    border-radius: 50%;
-    transition: all ease 0.4s;
-}
-
-#stop-right-p2 h4:hover::after {
-    bottom: 0;
-    border-radius: 0;
-}
-
-#stop-right-p2 h4 a {
-    text-decoration: none;
-    color: #00246B;
-    position: relative;
-    z-index: 9;
-}
-
-#stop-right-p2 h4:hover a {
-    color: #CADCFC;
-}
-
-#supportbottom {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.1vw;
-}
-
-.sbox {
-    height: 90%;
-    width: 20%;
-    background-color: #00246B;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    display: block;
-}
-
-.sbox-content {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.sbox-content h2 {
-    color: #FCA311;
-    padding: 1vw 1vw;
-    font-size: 1.3vw;
-}
-
-.sbox-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    z-index: 2;
-}
-
-.sbox-hover h3 {
-    color: #CADCFC;
-    font-size: 1.2vw;
-    text-align: left;
-    margin-bottom: 1vw;
-}
-
-.sbox-hover i {
-    color: #FCA311;
-    font-size: 2vw;
 }
 
 #team {
