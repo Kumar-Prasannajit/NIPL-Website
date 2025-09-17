@@ -447,4 +447,166 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // -----------------------
+    // --- Project Data ---
+    const projects = [
+        {
+            title: "Breath X",
+            supportedBy: "Navgyan Innovations",
+            domain: "Healthcare IoT",
+            year: 2024,
+            duration: "6 Months",
+            technologies: ["Python", "Flask", "Sensors"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
+            teamMembers: ["Member 1", "Member 2", "Member 3"]
+        },
+        {
+            title: "Brain Viz",
+            supportedBy: "Navgyan Innovations",
+            domain: "AI & Data Visualization",
+            year: 2024,
+            duration: "6 Months",
+            technologies: ["Python", "TensorFlow", "D3.js"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
+            teamMembers: ["Member 1", "Member 2", "Member 3"]
+        },
+        {
+            title: "Neurolang",
+            supportedBy: "Navgyan Innovations",
+            domain: "Natural Language Processing",
+            year: 2024,
+            duration: "6 Months",
+            technologies: ["Python", "Keras", "NLP Libraries"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
+            teamMembers: ["Member 1", "Member 2", "Member 3"]
+        },
+        {
+            title: "Aquatron",
+            supportedBy: "Navgyan Innovations",
+            domain: "Environmental Monitoring",
+            year: 2024,
+            duration: "6 Months",
+            technologies: ["IoT", "Cloud", "JavaScript"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
+            teamMembers: ["Member 1", "Member 2", "Member 3"]
+        },
+        {
+            title: "Unicollab",
+            supportedBy: "Navgyan Innovations",
+            domain: "Web Development",
+            year: 2024,
+            duration: "6 Months",
+            technologies: ["HTML", "CSS", "JavaScript"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
+            teamMembers: ["Member 1", "Member 2", "Member 3"]
+        },
+        {
+            title: "Manima",
+            supportedBy: "Navgyan Innovations",
+            domain: "Mobile Application",
+            year: 2024,
+            duration: "6 Months",
+            technologies: ["React Native", "Firebase", "Node.js"],
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
+            teamMembers: ["Member 1", "Member 2", "Member 3"]
+        }
+    ];
+
+    // --- Project overlay logic ---
+    const projectOverlay = document.getElementById('project-overlay');
+    const projectElems = document.querySelectorAll('#elem');
+    const overlayContent = projectOverlay.querySelector('.project-overlay-content');
+
+    // Helper to render overlay content
+    function renderProjectOverlay(project) {
+        overlayContent.innerHTML = `
+            <button class="project-overlay-close" aria-label="Close overlay">&times;</button>
+            <div id="project-overlay-top">
+                <h1>${project.title}</h1>
+                <video autoplay muted loop src="./assets/vid1.mp4"></video>
+            </div>
+            <div id="project-overlay-middle">
+                <div class="project-middle-left">
+                    <h1>Supported By : <span>${project.supportedBy}</span></h1>
+                </div>
+                <div class="project-middle-right">
+                    <h1>Domain : <span>${project.domain}</span></h1>
+                    <h1>Year : <span>${project.year}</span></h1>
+                    <h1>Duration : <span>${project.duration}</span></h1>
+                    <h1>Technologies : <span>${project.technologies.join(', ')}</span></h1>
+                </div>
+            </div>
+            <div id="project-overlay-bottom">
+                <div class="projectDesc">
+                    <h2>Description</h2>
+                    <p>${project.description}</p>
+                </div>
+                <div class="projectTeam">
+                    <h2>Team Members</h2>
+                    <ul>
+                        ${project.teamMembers.map(member => `<li>${member}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+
+        // Re-attach close event to new button
+        const closeBtn = overlayContent.querySelector('.project-overlay-close');
+        if (closeBtn) closeBtn.addEventListener('click', closeProjectOverlay);
+    }
+
+    // --- Close overlay with cross button ---
+    function closeProjectOverlay() {
+        projectOverlay.classList.add('hidden');
+    }
+
+    // Attach click handlers to each project element
+    projectElems.forEach((elem, idx) => {
+        elem.addEventListener('click', () => {
+            renderProjectOverlay(projects[idx]);
+            projectOverlay.classList.remove('hidden');
+        });
+    });
+
+    // Hide overlay on click outside content
+    projectOverlay.addEventListener('click', (e) => {
+        if (e.target === projectOverlay) {
+            closeProjectOverlay();
+        }
+    });
+
+    // -----------------------
+    // Auto-close menu overlay on mobile when a link is clicked
+    // -----------------------
+    document.querySelectorAll('.menu-overlay nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.menu-overlay').classList.remove('active');
+                document.getElementById('baricon').classList.remove('active');
+                document.body.classList.remove('menu-open');
+                resetNavColors();
+            }
+        });
+    });
+
+    // Helper to reset nav colors to default (blue bg, white links)
+    function resetNavColors() {
+        if (nav) {
+            gsap.to(nav, {
+                backgroundColor: "#00246B",
+                borderBottomColor: "#CADCFC",
+                duration: 0.4,
+                ease: "power2.inOut"
+            });
+            const elems = [...navLinks, ...menuText];
+            if (elems.length) {
+                gsap.to(elems, {
+                    color: "#fff",
+                    duration: 0.4,
+                    ease: "power2.inOut"
+                });
+            }
+        }
+    }
 }); // end DOMContentLoaded
