@@ -577,13 +577,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // -----------------------
-    // Auto-close menu overlay on mobile when a link is clicked
+    // Auto-close menu overlay when a menu link is clicked (close on all screen sizes if menu is open)
     // -----------------------
     document.querySelectorAll('.menu-overlay nav a').forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                document.querySelector('.menu-overlay').classList.remove('active');
-                document.getElementById('baricon').classList.remove('active');
+            const menuOverlayEl = document.querySelector('.menu-overlay');
+            const barIconEl = document.getElementById('baricon');
+            // only act if the overlay is currently open
+            if (menuOverlayEl && menuOverlayEl.classList.contains('active')) {
+                menuOverlayEl.classList.remove('active');
+                if (barIconEl) barIconEl.classList.remove('active');
                 document.body.classList.remove('menu-open');
                 resetNavColors();
             }
