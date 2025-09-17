@@ -78,7 +78,7 @@ body {
     height: 100vh;
     background-color: #00246b;
     position: relative;
-    padding-top: 85px;
+    padding-top: 40px;
     /* Add padding to account for fixed nav */
 }
 
@@ -241,15 +241,16 @@ body {
 
 #nav-socials {
     display: flex;
-    justify-content: space-around;
-    gap: 15px;
+    /* justify-content: space-around; */
+    gap: 5px;
     padding-left: 1vw;
+    align-items: flex-end;
 }
 
 #nav-socials a {
     font-family: 'Bebas Neue', sans-serif;
     color: #00246B;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -1093,8 +1094,6 @@ body {
 
 .project-overlay-content {
     width: 48vw;
-    max-width: 600px;
-    min-width: 320px;
     height: 80vh;
     background: #fff;
     border-radius: 18px;
@@ -1107,12 +1106,13 @@ body {
 }
 
 #project-overlay-top {
-    flex: 0 0 38%;
+    width: 100%;
+    height: 30%;
+    flex: 0 0 35%;
     background: linear-gradient(120deg, #CADCFC 60%, #FCA311 100%);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 2vw 2vw 1vw 2vw;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
@@ -1122,24 +1122,19 @@ body {
 
 #project-overlay-top h1 {
     color: #00246B;
-    font-size: 2.1rem;
+    font-size: 3vw;
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 2px;
-    margin-bottom: 1vw;
+    letter-spacing: .15vw;
     text-align: center;
     text-shadow: 0 2px 8px #fff8;
 }
 
 #project-overlay-top video {
-    width: 80%;
+    width: 40%;
+    height: 95%;
     max-width: 340px;
-    height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,36,107,0.12);
-    background: #00246B;
-    margin: 0 auto;
-    display: block;
 }
 
 #project-overlay-middle {
@@ -1158,7 +1153,7 @@ body {
 
 .project-middle-left h1,
 .project-middle-right h1 {
-    font-size: 1.1rem;
+    font-size: 1.2vw;
     color: #00246B;
     font-family: 'Syne', sans-serif;
     font-weight: 600;
@@ -1174,27 +1169,23 @@ body {
 }
 
 .project-middle-left {
-    flex: 1 1 40%;
+    background-color: transparent;
 }
 
 .project-middle-right {
-    flex: 2 1 60%;
     display: flex;
     flex-direction: column;
     gap: 0.2vw;
 }
 
 #project-overlay-bottom {
-    flex: 1 1 44%;
+    flex: 1 1 47%;
     background: linear-gradient(120deg, #fff 60%, #cadcfc 100%);
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
     display: flex;
-    flex-direction: row;
-    gap: 2vw;
-    padding: 2vw 2vw 2vw 2vw;
+    padding: 0.25vw 2vw 0.25vw 2vw;
     overflow-y: auto;
-    box-shadow: 0 2px 12px rgba(0,36,107,0.06);
 }
 
 .projectTeam {
@@ -1202,9 +1193,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-left: 2px solid #CADCFC;
+    /* border-left: 2px solid #CADCFC; */
     padding-left: 1.5vw;
-    min-width: 120px;
 }
 
 .projectDesc p {
@@ -1218,10 +1208,11 @@ body {
 
 .projectTeam h2 {
     color: #00246B;
-    font-size: 1.1rem;
+    font-size: 1.25vw;
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 0.5vw;
     letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .projectTeam ul {
@@ -1232,10 +1223,9 @@ body {
 
 .projectTeam li {
     color: #00246B;
-    font-size: 1rem;
+    font-size: 1vw;
     font-family: 'Syne', sans-serif;
     margin-bottom: 0.3vw;
-    opacity: 0.85;
 }
 
 .projectDesc {
@@ -1243,18 +1233,17 @@ body {
     padding-right: 1vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: justify;
 }
 
 .projectDesc h2 {
     color: #00246B;
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1.5px;
     margin-bottom: 0.7vw;
     background-clip: text;
-    text-shadow: 0 2px 8px #fff8;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 /* --- Project Overlay Close Button --- */
@@ -1299,34 +1288,88 @@ body {
         width: 90vw;
         max-width: 98vw;
         min-width: 0;
-        height: 92vh;
-        border-radius: 12px;
+        height: fit-content;
+        border-radius: 4vw;
     }
     #project-overlay-top {
+        flex-direction: column;
         padding: 4vw 2vw 2vw 2vw;
     }
+
+    #project-overlay-top h1 {
+        font-size: 8vw;
+        margin-bottom: 1vw;
+    }
+
     #project-overlay-top video {
-        width: 100%;
-        height: 18vw;
+        width: 80%;
+        height: 40vw;
         min-height: 90px;
-        max-width: 100%;
+        max-width: 80%;
     }
     #project-overlay-middle {
         flex-direction: column;
         gap: 1vw;
         padding: 2vw 3vw;
+        justify-content: normal;
     }
     #project-overlay-bottom {
         flex-direction: column;
         gap: 1vw;
         padding: 2vw 3vw;
     }
+
+    .project-middle-left,
+    .project-middle-right {
+        width: 100%;
+        text-align: left;
+    }
+
+    .project-middle-left h1,
+    .project-middle-right h1 {
+        font-size: 3.5vw;
+    }
+
+    .projectDesc h2 {
+        font-size: 4vw;
+        margin-bottom: 1vw;
+    }
+
+    .projectDesc {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+
     .projectTeam {
         border-left: none;
         border-top: 2px solid #CADCFC;
         padding-left: 0;
         padding-top: 1vw;
         min-width: 0;
+    }
+
+    .projectTeam h2 {
+        font-size: 3.5vw;
+        margin-bottom: 1vw;
+    }
+
+    .projectTeam li {
+        font-size: 3vw;
+        margin-bottom: 0.8vw;
+    }
+
+    .sacramentoinfo {
+        font-size: 8vw;
+    }
+
+    #elem img {
+        display: none;
+    }
+
+    #nav-socials a{
+        font-size: 5vw;
+        line-height: .8;
     }
 }
 
@@ -1804,7 +1847,13 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-bottom: 40px;
+    }
+
+    #footerleft {
+        border-bottom: 1.5px solid #CADCFC;
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
     }
 
     #footerleft,
@@ -1828,8 +1877,9 @@ body {
 
     #copyright h4,
     .address {
+
         padding: 0 10px;
-        font-size: 0.9rem;
+        font-size: 3.9vw;
     }
 
     #footeright h2 {
@@ -1859,21 +1909,19 @@ body {
     }
 
     .socials-heading {
-        font-size: 1rem;
-        margin-top: 20px;
+        display: none;
     }
 
     .social-links {
-        gap: 15px;
-        margin-bottom: 20px;
+        gap: 5vw;
+        margin-bottom: 1vw;
     }
 
     .social-links a {
-        font-size: 1.3rem;
+        font-size: 5.3vw;
     }
 
     .footer-bottom {
-        flex-direction: column;
         gap: 10px;
         text-align: center;
     }

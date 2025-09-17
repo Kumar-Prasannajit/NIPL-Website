@@ -457,13 +457,13 @@ document.addEventListener('DOMContentLoaded', () => {
             domain: "Healthcare IoT",
             year: 2024,
             duration: "6 Months",
-            technologies: ["Python", "Flask", "Sensors"],
+            technologies: ["Python", "Flask", "Sensors","Python5", "Flask9", "Sejgvnsors"],
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua with additional words.",
-            teamMembers: ["Member 1", "Member 2", "Member 3"]
+            teamMembers: ["Member 1", "Member 2", "Member 3","Member 1", "Member 2", "Member 3"]
         },
         {
             title: "Brain Viz",
-            supportedBy: "Navgyan Innovations",
+            supportedBy: "Navgyan Innovations, BIRAC",
             domain: "AI & Data Visualization",
             year: 2024,
             duration: "6 Months",
@@ -529,9 +529,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div id="project-overlay-middle">
                 <div class="project-middle-left">
                     <h1>Supported By : <span>${project.supportedBy}</span></h1>
+                    <h1>Domain : <span>${project.domain}</span></h1>
                 </div>
                 <div class="project-middle-right">
-                    <h1>Domain : <span>${project.domain}</span></h1>
                     <h1>Year : <span>${project.year}</span></h1>
                     <h1>Duration : <span>${project.duration}</span></h1>
                     <h1>Technologies : <span>${project.technologies.join(', ')}</span></h1>
